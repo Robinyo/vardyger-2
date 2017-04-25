@@ -33,6 +33,8 @@ The content folder: ui.content/src/main/resources/jcr_root/content
 ### pom.xml
 
 ```
+    ...
+    
     <Sling-Initial-Content>           
       <!-- Initial content -->
       jcr_root/content;overwrite:=true;uninstall:=true;path:=/content,
@@ -45,6 +47,8 @@ The content folder: ui.content/src/main/resources/jcr_root/content
       jcr_root/etc/author/assets;overwrite:=true;uninstall:=true;path:=/author/assets,
       jcr_root/etc/author/build;overwrite:=true;uninstall:=true;path:=/author/build                    
     </Sling-Initial-Content>
+    
+    ...
 ```
 
 ## Scripts (by convention, located in jcr_root/apps)
