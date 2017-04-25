@@ -35,7 +35,7 @@ Navigate to [http://localhost:8080/author/index.html](http://localhost:8080/auth
 
 ### Maven Archetypes
 
-Three Maven archetypes where used to kickstart this project (this is purely informational; you do not need to run the following commands).
+Three Maven archetypes where used to kickstart this project (this is purely informational, you do not need to run the following commands).
 
 1. Create the parent pom:
 
