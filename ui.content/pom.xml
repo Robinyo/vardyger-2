@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" 
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    
+    <modelVersion>4.0.0</modelVersion>
+    
+    <parent>
+      <relativePath>../pom.xml</relativePath>
+      <artifactId>vardyger-publishing-platform</artifactId>
+      <groupId>org.vardyger</groupId>
+      <version>1.0.0-SNAPSHOT</version>
+    </parent>
+    
+    <artifactId>ui-content</artifactId>
+    <packaging>bundle</packaging>
+    <version>1.1.0-SNAPSHOT</version>
+    
+    <name>ui.content</name>
+    <description>org.vardyger - ui.content</description>
+    
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.felix</groupId>
+                <artifactId>maven-bundle-plugin</artifactId>
+                <extensions>true</extensions>
+                <version>${maven-bundle-plugin.version}</version>
+                <configuration>
+                    <instructions>
+                        <Sling-Nodetypes>SLING-INF/nodetypes/nodetypes.cnd</Sling-Nodetypes>
+                        <Sling-Initial-Content>
+                        
+                          <!-- Initial content -->
+                          jcr_root/content;overwrite:=true;uninstall:=true;path:=/content,
+                          
+                          <!-- Script (apps/vardyger/author/html.esp) to load Ionic Web Application -->
+                          jcr_root/apps;overwrite:=true;uninstall:=true;path:=/apps,
+                          
+                          <!-- Ionic Web Application -->
+                          jcr_root/etc/author;overwrite:=true;uninstall:=true;path:=/author,
+                          jcr_root/etc/author/assets;overwrite:=true;uninstall:=true;path:=/author/assets,
+                          jcr_root/etc/author/build;overwrite:=true;uninstall:=true;path:=/author/build
+                          
+                        </Sling-Initial-Content>
+                    </instructions>
+                </configuration>
+            </plugin>
+             <plugin>
+                <groupId>org.apache.sling</groupId>
+                <artifactId>maven-sling-plugin</artifactId>
+                <version>${maven-sling-plugin.version}</version>
+                <configuration>
+                    <slingUrl>http://${sling.host}:${sling.port}/system/console</slingUrl>
+                    <user>${sling.username}</user>
+                    <password>${sling.password}</password>
+                </configuration>                
+            </plugin>
+        </plugins>
+    </build>
+    <profiles>
+        <profile>
+            <id>autoInstallBundle</id>
+            <build>
+                <plugins>
+                    <plugin>
+                        <groupId>org.apache.sling</groupId>
+                        <artifactId>maven-sling-plugin</artifactId>
+                        <executions>
+                            <execution>
+                                <id>install-bundle</id>
+                                <goals>
+                                    <goal>install</goal>
+                                </goals>
+                            </execution>
+                        </executions>
+                    </plugin>
+                </plugins>
+            </build>
+        </profile>
+    </profiles> 
+</project>

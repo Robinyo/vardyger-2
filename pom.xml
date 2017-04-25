@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" 
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  
+  <modelVersion>4.0.0</modelVersion>
+  
+  <groupId>org.vardyger</groupId>
+  <artifactId>vardyger-publishing-platform</artifactId>
+  <version>1.0.0-SNAPSHOT</version>
+  <packaging>pom</packaging>
+  
+  <name>The Vardyger Publishing Platform</name>
+  <description>Multi-module Maven project for the Vardyger Publishing Platform</description>
+  
+  <properties>
+    <sling.host>localhost</sling.host>
+    <sling.port>8080</sling.port>
+    <sling.username>admin</sling.username>
+    <sling.password>admin</sling.password>
+    
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+    
+    <!-- Plugin versions -->
+    <maven-compiler-plugin.version>3.6.0</maven-compiler-plugin.version>
+    <source.version>1.8</source.version>
+    <target.version>1.8</target.version>
+    
+    <maven-bundle-plugin.version>3.3.0</maven-bundle-plugin.version>
+    <maven-sling-plugin.version>2.2.0</maven-sling-plugin.version>    
+    
+  </properties>
+  
+  <modules>
+    <module>core</module>
+    <module>ui.content</module>
+    <module>author</module>
+  </modules>
+  
+  <!--
+  <profiles>
+    <profile>
+      <id>java8</id>
+      <activation>
+        <jdk>[1.8,)</jdk>
+      </activation>
+      <modules>
+      </modules>
+    </profile>
+  </profiles>
+  -->
+  
+</project>

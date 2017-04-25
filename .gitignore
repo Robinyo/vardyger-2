@@ -1,0 +1,46 @@
+target
+dependency-reduced-pom.xml
+
+# Apache Sling #
+################
+/sling/
+derby.log
+bundles/commons/contentdetection/jackrabbit/
+bundles/extensions/models/integration-tests/sling
+bundles/extensions/i18n/jackrabbit
+bundles/jcr/contentloader/jackrabbit
+testing/mocks/sling-mock-oak/dependency-reduced-pom.xml
+contrib/extensions/distribution/it/sling
+contrib/explorers/resourceeditor/node
+contrib/nosql/launchpad/sling
+
+# Intellij #
+############
+*.iml
+*.ipr
+*.iws
+.idea
+
+# Eclipse #
+###########
+**/.settings
+**/.project
+**/.classpath
+**/.checkstyle
+
+# Packages #
+############
+# it's better to unpack these files and commit the raw source
+# git has its own built in compression methods
+*.7z
+*.dmg
+*.gz
+*.iso
+*.jar
+*.rar
+*.tar
+*.zip
+
+# Logs and databases #
+######################
+*.log
