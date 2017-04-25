@@ -56,10 +56,12 @@ The content folder: ui.content/src/main/resources/jcr_root/content
 ### ui.content/src/main/resources/jcr_root/apps/vardyger/author/html.esp
 This is the "host" page for the Author (Content Authoring) application.
 
+This is where we include the files (e.g., "build/main.js") generated during the build process (as per the author/www/index.html file).
+
 ## External Scripts (by convention, located in jcr_root/etc)
 
 ### ui.content/src/main/resources/jcr_root/etc/author
-The Author application is copied from the author module (author/www) to the ui.content module (etc/author)
+The Author application is copied from the **author module** (author/www) to the **ui.content module** (etc/author)
 
 ## Build
 
