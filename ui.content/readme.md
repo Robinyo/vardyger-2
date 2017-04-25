@@ -1,12 +1,36 @@
 # The ui.content module
 
-## ui.content/src/main/resources/jcr_root/apps/vardyger/author/html.esp
-This is the "host" page for the Author (Content Authoring) application.
+Apache Sling uses scripts or servlets to render and process content.
 
-## ui.content/src/main/resources/jcr_root/etc/author
-The Author application is copied from author/www -> /etc/author
+## Node Types
 
-## pom.xml
+### src/main/resources/SLING-INF/nodetypes/nodetypes.cnd
+
+```
+    <vardyger = 'https://vardyger.org'>
+
+    [vardyger:author] > nt:unstructured
+
+    [vardyger:page] > nt:unstructured
+      - title (string)
+      - description (string)
+      
+    ...  
+```
+
+## Content (by convention, located in jcr_root/content)
+
+The content folder: ui.content/src/main/resources/jcr_root/content
+
+### author/index.json
+
+```
+    {
+      "jcr:primaryType":"vardyger:author"
+    }
+```
+
+### pom.xml
 
 ```
     <Sling-Initial-Content>           
@@ -23,6 +47,15 @@ The Author application is copied from author/www -> /etc/author
     </Sling-Initial-Content>
 ```
 
+## Scripts (by convention, located in jcr_root/apps)
+
+### ui.content/src/main/resources/jcr_root/apps/vardyger/author/html.esp
+This is the "host" page for the Author (Content Authoring) application.
+
+## External Scripts (by convention, located in jcr_root/etc)
+
+### ui.content/src/main/resources/jcr_root/etc/author
+The Author application is copied from the author module (author/www) to the ui.content module (etc/author)
 
 ## Build
 
