@@ -37,6 +37,7 @@ Three Maven archetypes where used to kickstart this project (this is purely info
 
 1. Create the parent pom:
 
+```
 mvn archetype:generate \
     -DarchetypeGroupId=org.codehaus.mojo.archetypes \
     -DarchetypeArtifactId=pom-root \
@@ -45,9 +46,10 @@ mvn archetype:generate \
     -DartifactId=vardyger \
     -Dversion=1.0.0-SNAPSHOT \
     -DinteractiveMode=false
-    
+```
 2. Create the "core" bundle project:
 
+```
 mvn archetype:generate \
     -DarchetypeGroupId=org.apache.sling \
     -DarchetypeArtifactId=sling-bundle-archetype \
@@ -59,9 +61,11 @@ mvn archetype:generate \
     -DartifactName="core" \
     -DpackageGroup="core" \
     -DinteractiveMode=false  
-    
+```
+
 3. Create the "ui.content" content project:
 
+```
 mvn archetype:generate \
     -DarchetypeGroupId=org.apache.sling \
     -DarchetypeArtifactId=sling-initial-content-archetype \
@@ -73,8 +77,10 @@ mvn archetype:generate \
     -DartifactName="ui.content" \
     -DpackageGroup="ui.content" \
     -DinteractiveMode=false  
-  
+```
+
 4. Create the "author" project: 
-  
+
+```  
 ionic start author sidemenu
-   
+```
