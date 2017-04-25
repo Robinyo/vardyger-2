@@ -20,6 +20,8 @@ This project requires Apache Sling.
 java -Xmx1024M -jar org.apache.sling.launchpad-8.jar
 ```
 
+Note: The Sling Launchpad will take a few minutes to unpack, install itself, and start up.
+
 ## Build
 
 Build and deploy to a running instance of the Sling Launchpad:
