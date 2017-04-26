@@ -4,11 +4,16 @@
   "author": "Ionic Framework",
   "homepage": "http://ionicframework.com/",
   "private": true,
+  "config": {
+    "ionic_copy": "./config/copy.config.js"
+  },
   "scripts": {
     "clean": "ionic-app-scripts clean",
     "build": "ionic-app-scripts build",
+    "export": "ionic-app-scripts copy --copy ./config/export.config.js",
     "ionic:build": "ionic-app-scripts build",
-    "ionic:serve": "ionic-app-scripts serve"
+    "ionic:serve": "ionic-app-scripts serve",
+    "ionic:export": "ionic-app-scripts copy --copy ./config/export.config.js"
   },
   "dependencies": {
     "@angular/common": "4.0.0",
