@@ -3,7 +3,7 @@
 // then provide an object with a `src` array of globs and a `dest` string
 module.exports = {
   copyAuthorManifest: {
-	src: ['{{SRC}}/manifest.json', '{{SRC}}/service-worker.js'],
+	src: ['{{ROOT}}/www/manifest.json', '{{ROOT}}/www/service-worker.js'],
 	dest: '{{ROOT}}/../ui.content/src/main/resources/jcr_root/etc/author'
   }
 }

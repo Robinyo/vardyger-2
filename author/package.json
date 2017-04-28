@@ -8,12 +8,16 @@
     "ionic_copy": "./config/copy.config.js"
   },
   "scripts": {
-    "clean": "ionic-app-scripts clean",
+  
+    "clean": "rm -rf www",
     "build": "ionic-app-scripts build",
-    "export": "ionic-app-scripts copy --copy ./config/export.config.js",
+    "watch": "ionic-app-scripts watch",
+    
+    "export": "cp -r www/* ../ui.content/src/main/resources/jcr_root/etc/author",
+    
     "ionic:build": "ionic-app-scripts build",
-    "ionic:serve": "ionic-app-scripts serve",
-    "ionic:export": "ionic-app-scripts copy --copy ./config/export.config.js"
+    "ionic:serve": "ionic-app-scripts serve"
+    
   },
   "dependencies": {
     "@angular/common": "4.0.0",
