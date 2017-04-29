@@ -72,3 +72,9 @@ Build and deploy to a running instance of the Sling Launchpad:
 ## Login
 
 Navigate to [http://localhost:8080/author/index.html](http://localhost:8080/author/index.html).
+
+## Notes
+
+Placed copy of jcr_root/etc/author/config.xml in jcr_root/content/config.xml (it's referenced by cordova.js)
+
+
