@@ -21,10 +21,10 @@ To copy the application to the ui.content module, execute:
 See: `https://github.com/driftyco/ionic-app-scripts` and `node_modules/@ionic/app-scripts`
 
 ### Create a scaffold
-The Ionic framework includes several templates that you can use to create the scaffolding for new projects. We'll use the sidemenu template (this is is purely informational, you do not need to run the following command).
+The Ionic framework includes several templates that you can use to create the scaffolding for new projects. We'll use the blank template (this is is purely informational, you do not need to run the following command).
 
 1. Create the "author" project: 
 
 ```  
-ionic start author sidemenu
+ionic start author --no-cordova blank
 ```
