@@ -1,1 +1,70 @@
-<ion-nav [root]="rootPage"></ion-nav>
+<ion-split-pane when="md">
+
+  <ion-menu [content]="content">
+
+    <!--
+    <ion-header>
+      <ion-toolbar color="primary">
+        <ion-buttons>
+          <button ion-button icon-only color="royal">
+            <ion-icon name="apps"></ion-icon>
+          </button>
+          <button ion-button>Content</button>
+          <button ion-button>New Post</button>
+        </ion-buttons>
+      </ion-toolbar>
+    </ion-header>
+
+    -->
+
+    <ion-header>
+      <ion-toolbar color="secondary">
+        <h1 class="app-title">Author</h1>
+      </ion-toolbar>
+    </ion-header>
+
+    <ion-content class="page-app">
+
+      <ion-searchbar (ionInput)="getItems($event)"></ion-searchbar>
+
+      <ion-item-group>
+        <ion-item color="secondary">
+          <ion-icon name="add-circle" item-left></ion-icon>
+          New Post
+        </ion-item>
+        <ion-item color="secondary">
+          <ion-icon name="albums" item-left></ion-icon>
+          Content
+        </ion-item>
+      </ion-item-group>
+
+
+      <ion-list>
+
+        <ion-list-header>
+          <h2>Settings</h2>
+        </ion-list-header>
+
+        <ion-item color="secondary" text-wrap>
+          <h2>Getting started with Ionic 3 (and Angular 4)</h2>
+          <p color="primary">Published 1 day ago</p>
+        </ion-item>
+
+        <ion-item color="secondary" text-wrap>
+          <h2>How to build Apache Sling projects using Maven</h2>
+          <p>Published 2 days ago</p>
+        </ion-item>
+
+        <ion-item color="secondary" text-wrap>
+          <h2>Getting started with Apache Sling - Part 2</h2>
+          <p>Published 3 days ago</p>
+        </ion-item>
+
+      </ion-list>
+    </ion-content>
+
+  </ion-menu>
+
+  <ion-nav [root]="rootPage" main #content swipeBackEnabled="false"></ion-nav>
+
+</ion-split-pane>
