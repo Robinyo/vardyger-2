@@ -33,6 +33,10 @@ Build and deploy to a running instance of the Sling Launchpad:
 
 Navigate to [http://localhost:8080/author/index.html](http://localhost:8080/author/index.html).
 
+You should see something like:
+
+![Author UI screenshot](https://github.com/Robinyo/vardyger-2/blob/master/author.png)
+
 ### Maven Archetypes
 
 Three Maven archetypes where used to kickstart this project (this is purely informational, you do not need to run the following commands).
