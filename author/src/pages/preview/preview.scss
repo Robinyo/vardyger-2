@@ -4,9 +4,31 @@
 
 page-preview{
 
-  p {
+  h1, h2, h3, h4 {
     padding-left: 16px;
     padding-right: 16px;
   }
 
+  p {
+    padding-left: 16px;
+    padding-right: 16px;
+
+    a:link    {color:blue;}
+    a:visited {color:blue;}
+    a:hover   {color:blue;}
+    a:active  {color:blue;}
+  }
+
+  ul > li {
+    a:link    {color:blue;}
+    a:visited {color:blue;}
+    a:hover   {color:blue;}
+    a:active  {color:blue;}
+  }
+
+  pre {
+    padding-left: 16px;
+    padding-right: 16px;
+    font-weight: bold;
+  }
 }

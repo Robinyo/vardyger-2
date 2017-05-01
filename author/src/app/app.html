@@ -1,68 +1,109 @@
-<ion-split-pane when="md">
+<ion-split-pane when="lg">
 
   <ion-menu [content]="content">
 
-    <!--
-    <ion-header>
-      <ion-toolbar color="primary">
-        <ion-buttons>
-          <button ion-button icon-only color="royal">
-            <ion-icon name="apps"></ion-icon>
-          </button>
-          <button ion-button>Content</button>
-          <button ion-button>New Post</button>
-        </ion-buttons>
-      </ion-toolbar>
-    </ion-header>
-
-    -->
-
     <ion-header>
       <ion-toolbar color="secondary">
-        <h1 class="app-title">Author</h1>
+        <h1 class="app-title">Content Author</h1>
       </ion-toolbar>
     </ion-header>
 
-    <ion-content class="page-app">
-
+    <ion-content>
       <ion-searchbar (ionInput)="getItems($event)"></ion-searchbar>
-
       <ion-item-group>
         <ion-item color="secondary">
           <ion-icon name="add-circle" item-left></ion-icon>
           New Post
         </ion-item>
+        <!--
         <ion-item color="secondary">
           <ion-icon name="albums" item-left></ion-icon>
           Content
         </ion-item>
+        -->
       </ion-item-group>
 
+      <ion-item-group>
+        <ion-item-divider color="light">Settings</ion-item-divider>
+        <ion-item color="secondary">
+          <ion-icon name="construct" item-left></ion-icon>
+          General
+        </ion-item>
+        <ion-item color="secondary">
+          <ion-icon name="navigate" item-left></ion-icon>
+          Navigation
+        </ion-item>
+        <ion-item color="secondary">
+          <ion-icon name="pricetag" item-left></ion-icon>
+          Tags
+        </ion-item>
+      </ion-item-group>
 
-      <ion-list>
-
-        <ion-list-header>
-          <h2>Settings</h2>
-        </ion-list-header>
+      <ion-item-group>
+        <ion-item-divider color="light">Posts</ion-item-divider>
 
         <ion-item color="secondary" text-wrap>
-          <h2>Getting started with Ionic 3 (and Angular 4)</h2>
-          <p color="primary">Published 1 day ago</p>
+          <h2><strong>Build a Desktop Application with Ionic 3 (and Angular 4)</strong></h2>
+          <div>
+            <p>
+            <span>
+              <ion-icon name="contact"></ion-icon>
+            </span>
+              <span color="light" class="padding-top">&nbsp;Published a day ago</span>
+            </p>
+          </div>
         </ion-item>
 
         <ion-item color="secondary" text-wrap>
-          <h2>How to build Apache Sling projects using Maven</h2>
-          <p>Published 2 days ago</p>
+          <h2><strong>How to build Apache Sling projects using Maven</strong></h2>
+          <div>
+            <p>
+            <span>
+              <ion-icon name="contact"></ion-icon>
+            </span>
+              <span color="light" class="padding-top">&nbsp;Published two days ago</span>
+            </p>
+          </div>
         </ion-item>
 
         <ion-item color="secondary" text-wrap>
-          <h2>Getting started with Apache Sling - Part 2</h2>
-          <p>Published 3 days ago</p>
+          <h2><strong>Getting started with Apache Sling - Part 2</strong></h2>
+          <div>
+            <p>
+            <span>
+              <ion-icon name="contact"></ion-icon>
+            </span>
+              <span color="light" class="padding-top">&nbsp;Published a month ago</span>
+            </p>
+          </div>
         </ion-item>
 
-      </ion-list>
+        <ion-item color="secondary" text-wrap>
+          <h2><strong>Getting started with Apache Sling</strong></h2>
+          <div>
+            <p>
+            <span>
+              <ion-icon name="contact"></ion-icon>
+            </span>
+              <span color="light" class="padding-top">&nbsp;Published a month ago</span>
+            </p>
+          </div>
+        </ion-item>
+
+        <ion-item color="secondary" text-wrap>
+          <h2><strong>RESTEasy, embedded Jetty, Swagger and Guice</strong></h2>
+          <div>
+            <p>
+            <span>
+              <ion-icon name="contact"></ion-icon>
+            </span>
+              <span color="light" class="padding-top">&nbsp;Published 2 months ago</span>
+            </p>
+          </div>
+        </ion-item>
+
+      </ion-item-group>
     </ion-content>
-
   </ion-menu>
 
   <ion-nav [root]="rootPage" main #content swipeBackEnabled="false"></ion-nav>

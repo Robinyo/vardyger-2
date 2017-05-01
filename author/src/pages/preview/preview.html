@@ -3,19 +3,57 @@
     <button ion-button menuToggle>
       <ion-icon name="menu"></ion-icon>
     </button>
-    <h1 class="post-title">Getting started with Ionic 3 (and Angular 4)</h1>
+    <h1 class="post-title">Build a Desktop Application with Ionic 3 (and Angular 4)</h1>
   </ion-navbar>
 </ion-header>
 
 <ion-content class="page-preview">
 
-  <p>In the last few posts I have written about Apache Sling, a REST-based web framework,
-    that makes it easy to build content-oriented applications (e.g., websites and related services).</p>
+  <p>In the last few posts I have written about
+     <a href="http://robferguson.org/2017/03/23/getting-started-with-apache-sling/" target="_blank">Apache Sling</a>,
+     a REST-based web framework, that makes it easy to build content-oriented applications (e.g., websites and related services).</p>
 
-  <p>In this post, I'll walk you through the steps I followed when generating the scaffolding for an
-    awesome desktop application - the "authoring" UI for the Vardyger 2 Publishing Platform.</p>
-  <p>
-    ...
-  </p>
+  <p>In this post, I'll walk you through the steps I followed when generating the scaffolding for a desktop application with
+     <a href="http://blog.ionic.io/ionic-3-0-has-arrived/" target="_blank">version 3</a> of the Ionic Framework.</p>
+
+  <h4 id="prerequisites">Prerequisites</h4>
+
+  <ul>
+    <li><a href="https://nodejs.org/en/" target="_blank">Node.js</a> (which includes
+        <a href="https://www.npmjs.com/" target="_blank">npm</a>, the Node Package Manager)</li>
+  </ul>
+
+  <h3 id="theionicframework">The Ionic Framework</h3>
+
+  <p><a href="http://blog.ionic.io/ionic-3-0-has-arrived/" target="_blank">Ionic 3</a> combines <a href="http://angularjs.blogspot.com.au/2017/03/angular-400-now-available.html" target="_blank">Angular 4</a>, bespoke user interface <a href="https://ionicframework.com/docs/components/#overview" target="_blank">components</a> and <a href="https://cordova.apache.org/" target="_blank">Apache Cordova</a> to help developers build hybrid mobile applications. Version 3 of the Ionic Framework includes improved support for desktop applications, including a new <a href="http://blog.ionic.io/build-awesome-desktop-apps-with-ionics-new-responsive-grid/" target="_blank">responsive grid system</a> and <a href="http://blog.ionic.io/ionic-2-2-0-is-out/" target="_blank">split pane</a> support.</p>
+
+  <p>To install the Ionic Framework's <a href="https://ionicframework.com/docs/cli/" target="_blank"> Command Line Interface</a> (CLI) we'll use <code>npm</code>:</p>
+
+  <pre><code>sudo npm install -g ionic
+</code></pre>
+
+  <p>Alternately, to update Ionic:</p>
+
+  <pre><code>sudo npm update –g ionic
+</code></pre>
+
+  <p>To check the Ionic CLI version:</p>
+
+  <pre><code>ionic -v
+</code></pre>
+
+  <p>You should see output like:</p>
+
+  <pre><code>2.2.3
+</code></pre>
+
+  <h3 id="createascaffold">Create a scaffold</h3>
+
+  <p>Ionic includes several <a href="https://ionicframework.com/docs/intro/tutorial/" target="_blank">templates</a> that you can use to create the scaffolding for new projects. We'll use the <a href="https://github.com/driftyco/ionic2-starter-blank" target="_blank">blank </a> template and the <code>--no-cordova</code> command line flag (because we're building a desktop application):</p>
+
+  <pre><code>ionic start author --no-cordova blank
+</code></pre>
+
+  <p><code>ionic start</code> will create the directory structure and placeholders for your new project:</p>
 
 </ion-content>
