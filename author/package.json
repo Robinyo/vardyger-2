@@ -1,8 +1,8 @@
 {
-  "name": "ionic-hello-world",
-  "version": "0.0.0",
-  "author": "Ionic Framework",
-  "homepage": "http://ionicframework.com/",
+  "name": "vardyger-content-author",
+  "version": "0.1.0",
+  "author": "The Vardyger Foundation",
+  "homepage": "http://vardyger.org",
   "private": true,
   "config": {
     "ionic_copy": "./config/copy.config.js"
