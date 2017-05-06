@@ -6,7 +6,7 @@ A mobile-optimised "authoring" UI for the Vardyger 2 Publishing Platform.
 
 To run the build script found in the package.json scripts property, execute:
 
-    npm run build
+    npm run build [--prod]
 
 **Note:** By default the build and serve tasks produce dev builds (a build that does not include Ahead of Time (AoT) compilation or minification). To force a prod build you should use the --prod command line flag.
     
