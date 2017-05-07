@@ -14,6 +14,16 @@
 // for the .md, .ios, or .wp mode classes. The mode class is
 // automatically applied to the <body> element in the app.
 
+
+// https://github.com/driftyco/ionic/issues/10893
+// The base css for the menu is max-width: 28% and min-width: 270px.
+// It is set directly in all three platforms .scss files for the component.
+
+ion-menu {
+  max-width: 300px!important;
+}
+
+
 .app-title {
   padding-left: 16px;
 }

@@ -1,4 +1,4 @@
-<ion-split-pane when="lg">
+<ion-split-pane #layout when="lg">
 
   <ion-menu [content]="content">
 
@@ -9,58 +9,52 @@
     </ion-header>
 
     <ion-content>
+
       <ion-searchbar (ionInput)="getItems($event)"></ion-searchbar>
+
       <ion-item-group>
-        <ion-item color="secondary">
-          <ion-icon name="add-circle" item-left></ion-icon>
+
+        <button color="secondary" ion-item (click)="newPost()">
+          <ion-icon name="add-circle" [ngStyle]="{'color': '#32db64'}" item-left></ion-icon>
           New Post
-        </ion-item>
-        <!--
-        <ion-item color="secondary">
-          <ion-icon name="albums" item-left></ion-icon>
-          Content
-        </ion-item>
-        -->
+        </button>
+
       </ion-item-group>
 
       <ion-item-group>
+
         <ion-item-divider color="light">Settings</ion-item-divider>
-        <ion-item color="secondary">
-          <ion-icon name="settings" item-left></ion-icon>
-          General
-        </ion-item>
-        <ion-item color="secondary">
-          <ion-icon name="navigate" item-left></ion-icon>
-          Navigation
-        </ion-item>
-        <ion-item color="secondary">
-          <ion-icon name="pricetag" item-left></ion-icon>
-          Tags
-        </ion-item>
+
+        <button color="secondary" ion-item *ngFor="let p of settingsPages" (click)="openPage(p)">
+          <ion-icon name={{p.icon}} [ngStyle]="{'color': '#488aff'}" item-left></ion-icon>
+          {{p.title}}
+        </button>
+
       </ion-item-group>
 
       <ion-item-group>
+
         <ion-item-divider color="light">Posts</ion-item-divider>
 
-        <ion-item color="secondary" text-wrap>
+        <button color="secondary" ion-item text-wrap (click)="openPost()">
           <h2><strong>Build a Desktop Application with Ionic 3 (and Angular 4)</strong></h2>
           <div>
             <p>
-            <span>
-              <ion-icon name="contact"></ion-icon>
-            </span>
+           <span>
+             <ion-icon name="contact" [ngStyle]="{'color': '#32db64'}"></ion-icon>
+           </span>
               <span color="light" class="padding-top">&nbsp;Published a day ago</span>
             </p>
           </div>
-        </ion-item>
+        </button>
 
         <ion-item color="secondary" text-wrap>
           <h2><strong>How to build Apache Sling projects using Maven</strong></h2>
           <div>
             <p>
-            <span>
-              <ion-icon name="contact"></ion-icon>
-            </span>
+           <span>
+             <ion-icon name="contact"></ion-icon>
+           </span>
               <span color="light" class="padding-top">&nbsp;Published two days ago</span>
             </p>
           </div>
@@ -70,9 +64,9 @@
           <h2><strong>Getting started with Apache Sling - Part 2</strong></h2>
           <div>
             <p>
-            <span>
-              <ion-icon name="contact"></ion-icon>
-            </span>
+           <span>
+             <ion-icon name="contact"></ion-icon>
+           </span>
               <span color="light" class="padding-top">&nbsp;Published a month ago</span>
             </p>
           </div>
@@ -82,9 +76,9 @@
           <h2><strong>Getting started with Apache Sling</strong></h2>
           <div>
             <p>
-            <span>
-              <ion-icon name="contact"></ion-icon>
-            </span>
+           <span>
+             <ion-icon name="contact"></ion-icon>
+           </span>
               <span color="light" class="padding-top">&nbsp;Published a month ago</span>
             </p>
           </div>
@@ -94,9 +88,9 @@
           <h2><strong>RESTEasy, embedded Jetty, Swagger and Guice</strong></h2>
           <div>
             <p>
-            <span>
-              <ion-icon name="contact"></ion-icon>
-            </span>
+           <span>
+             <ion-icon name="contact"></ion-icon>
+           </span>
               <span color="light" class="padding-top">&nbsp;Published 2 months ago</span>
             </p>
           </div>
@@ -106,6 +100,6 @@
     </ion-content>
   </ion-menu>
 
-  <ion-nav [root]="rootPage" main #content swipeBackEnabled="false"></ion-nav>
+  <ion-nav main [root]="rootPage" #content swipeBackEnabled="false"></ion-nav>
 
 </ion-split-pane>

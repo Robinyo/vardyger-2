@@ -6,11 +6,16 @@ import { StatusBar } from '@ionic-native/status-bar';
 
 import { MyApp } from './app.component';
 import { PreviewPage } from '../pages/preview/preview';
+import { EditorPage } from '../pages/editor/editor';
+
+import { GeneralSettingsPage } from '../pages/settings/general/general';
 
 @NgModule({
   declarations: [
     MyApp,
-    PreviewPage
+    PreviewPage,
+    EditorPage,
+    GeneralSettingsPage
   ],
   imports: [
     BrowserModule,
@@ -19,7 +24,9 @@ import { PreviewPage } from '../pages/preview/preview';
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
-    PreviewPage
+    PreviewPage,
+    EditorPage,
+    GeneralSettingsPage
   ],
   providers: [
     StatusBar,
@@ -27,4 +34,5 @@ import { PreviewPage } from '../pages/preview/preview';
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
 })
+
 export class AppModule {}
