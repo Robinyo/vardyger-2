@@ -69,8 +69,9 @@ export class MyApp {
     this.showSplitPane(false);
   }
 
-  openPost(post) {
-    this.nav.push(PreviewPage, { param1: post} );
+  showPost(post) {
+    // this.nav.push(PreviewPage, { param1: post} );
+    this.nav.setRoot(PreviewPage, { param1: post} )
     this.menu.close();
   }
 
