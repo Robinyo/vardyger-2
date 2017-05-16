@@ -37,6 +37,9 @@ You should see something like:
 
 ![Author UI screenshot](https://github.com/Robinyo/vardyger-2/blob/master/author.png)
 
+Choose "New Post" and you should see something like:
+![Author UI screenshot](https://github.com/Robinyo/vardyger-2/blob/master/new-post.png)
+
 ### Maven Archetypes
 
 Three Maven archetypes where used to kickstart this project (this is purely informational, you do not need to run the following commands).

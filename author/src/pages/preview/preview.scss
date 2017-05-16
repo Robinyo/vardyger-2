@@ -1,5 +1,10 @@
 page-preview {
 
+  ion-header > ion-navbar > div.toolbar-content.toolbar-content-md {
+    padding-left: 6px;
+    background-color: #fff;
+  }
+
   h1, h2, h3, h4 {
     padding-left: 16px;
     padding-right: 16px;
@@ -28,3 +33,4 @@ page-preview {
     font-weight: bold;
   }
 }
+
