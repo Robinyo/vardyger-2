@@ -38,6 +38,7 @@ You should see something like:
 ![Author UI screenshot](https://github.com/Robinyo/vardyger-2/blob/master/author.png)
 
 Choose "New Post" and you should see something like:
+
 ![Author UI screenshot](https://github.com/Robinyo/vardyger-2/blob/master/new-post.png)
 
 ### Maven Archetypes
