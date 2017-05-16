@@ -12,4 +12,13 @@ export class PreviewPage {
 
   }
 
+  // ngOnInit
+  ionViewWillEnter() {
+    console.log("ionViewWillEnter()");
+  }
+
+  // ngOnDestroy
+  onViewWillLeave() {
+    console.log("onViewWillLeave()");
+  }
 }

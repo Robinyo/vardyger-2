@@ -1,3 +1,16 @@
+.savePostMessage {
+  max-width: 180px !important;
+  margin-left: 4px;
+}
+
 page-editor {
 
+  ion-header > ion-toolbar:nth-child(2) > div.toolbar-content.toolbar-content-md {
+    background-color: white;
+  }
+
+  div.scroll-content {
+    padding-top: 10px;
+    padding-left: 10px;
+  }
 }

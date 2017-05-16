@@ -11,5 +11,4 @@ export class GeneralSettingsPage {
   constructor(public navCtrl: NavController) {
 
   }
-
 }

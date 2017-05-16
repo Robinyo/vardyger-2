@@ -1,12 +1,76 @@
 <ion-header>
-  <ion-navbar color="light">
-    <button ion-button menuToggle>
-      <ion-icon name="menu"></ion-icon>
-    </button>
-    <h1 class="post-title">Your Post Title</h1>
-  </ion-navbar>
+
+  <ion-toolbar color="light">
+
+    <ion-buttons left>
+      <button ion-button icon-only>
+        <ion-icon name="attach" color="dark"></ion-icon>
+      </button>
+
+      <button ion-button icon-left solid color="dark" (click)="showContentPage()">
+        <ion-icon name="document"></ion-icon>
+        CONTENT
+      </button>
+
+      <button ion-button icon-left solid color="dark">
+        <ion-icon name="add"></ion-icon>
+        NEW POST
+      </button>
+
+      <button ion-button icon-left solid color="dark">
+        <ion-icon name="settings"></ion-icon>
+        SETTINGS
+      </button>
+    </ion-buttons>
+
+    <ion-buttons right>
+      <button ion-button icon-only>
+        <ion-icon name="help-circle" color="dark"></ion-icon>
+      </button>
+
+      <button ion-button icon-only>
+        <ion-icon name="contact" color="dark"></ion-icon>
+      </button>
+
+      <button ion-button icon-right solid color="dark" (click)="presentPopover($event)">
+        ROB FERGUSON
+        <ion-icon name="arrow-dropdown"></ion-icon>
+      </button>
+     </ion-buttons>
+
+
+  </ion-toolbar>
+
+  <ion-toolbar>
+    <h2 class="post-title">Your Post Title</h2>
+  </ion-toolbar>
+
 </ion-header>
 
-<ion-content class="page-preview">
-
+<ion-content>
+Your post content...
 </ion-content>
+
+<ion-footer>
+  <ion-toolbar color="light">
+
+    <ion-badge color="dark">Ionic 3</ion-badge>
+    <ion-badge color="dark">Angular 4</ion-badge>
+    <ion-badge color="dark">TypeScript</ion-badge>
+
+    <!--
+    <ion-buttons left>
+      <button ion-button solid color="save">
+        LEFT
+      </button>
+    </ion-buttons>
+    -->
+
+    <ion-buttons right>
+      <button ion-button solid color="secondary" (click)="savePost()">
+        SAVE POST
+      </button>
+    </ion-buttons>
+
+  </ion-toolbar>
+</ion-footer>

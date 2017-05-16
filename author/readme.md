@@ -20,6 +20,8 @@ To copy the application to the ui.content module, execute:
 
 See: `https://github.com/driftyco/ionic-app-scripts` and `node_modules/@ionic/app-scripts`
 
+**Note:** Don't change the name of "app.module.ts" to "app-module.ts" or the Ionic build scripts will fail.
+
 ### Create a scaffold
 The Ionic framework includes several templates that you can use to create the scaffolding for new projects. We'll use the blank template (this is is purely informational, you do not need to run the following command).
 
