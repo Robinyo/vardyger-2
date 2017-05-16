@@ -69,9 +69,8 @@ export class MyApp {
     this.showSplitPane(false);
   }
 
-  openPost(id: number) {
-    console.log("openPost(" + id + ")");
-    this.nav.push(PreviewPage);
+  openPost(post) {
+    this.nav.push(PreviewPage, { param1: post} );
     this.menu.close();
   }
 
