@@ -37,7 +37,7 @@
       <ion-item-group>
         <ion-item-divider color="light">Posts</ion-item-divider>
 
-        <button ion-item *ngFor="let post of posts" text-wrap (click)="showPost(post)">
+        <button ion-item *ngFor="let post of posts" text-wrap (click)="previewPost(post)">
           <h2><strong>{{post.title}}</strong></h2>
           <div>
             <p>

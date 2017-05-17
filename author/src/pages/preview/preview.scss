@@ -5,14 +5,18 @@ page-preview {
     background-color: #fff;
   }
 
+  ion-content > div.scroll-content {
+    padding: 16px;
+  }
+
   h1, h2, h3, h4 {
-    padding-left: 16px;
-    padding-right: 16px;
+    /* padding-left: 16px;
+    padding-right: 16px; */
   }
 
   p {
-    padding-left: 16px;
-    padding-right: 16px;
+    /* padding-left: 16px;
+    padding-right: 16px; */
 
     a:link    {color:blue;}
     a:visited {color:blue;}
@@ -28,9 +32,8 @@ page-preview {
   }
 
   pre {
-    padding-left: 16px;
-    padding-right: 16px;
+    /* padding-left: 16px;
+    padding-right: 16px; */
     font-weight: bold;
   }
 }
-
