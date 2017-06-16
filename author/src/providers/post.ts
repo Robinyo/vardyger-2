@@ -1,4 +1,19 @@
 export class Post {
+  "jcr:primaryType": string;
+  "sling:resourceType": string;
+  "jcr:createdBy": string;
+  id: number;
+  uuid: string;
+  title: string;
+  html: string;
+  image: string;
+}
+
+/*
+export class Post {
+  "jcr:primaryType": string;
+  "sling:resourceType": string;
+  "jcr:createdBy": string;
   id: number;
   uuid: string;
   title: string;
@@ -21,3 +36,4 @@ export class Post {
   author: number;
   url: string;
 }
+*/

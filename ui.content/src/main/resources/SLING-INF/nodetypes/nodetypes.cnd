@@ -25,18 +25,8 @@
 //	  -	 http://jackrabbit.apache.org/node-type-notation.html
 //
 
-<vardyger = 'https://vardyger.org'>
+<my = 'http://namespace.com/my'>
 
-[vardyger:author] > nt:unstructured
-
-[vardyger:page] > nt:unstructured
+[my:node] > nt:unstructured
 	- title (string)
 	- description (string)
-	
-[vardyger:template] > nt:hierarchyNode
-
-[vardyger:component] > nt:unstructured
-
-[vardyger:comment] > nt:unstructured
-    - author (string)
-    - comment (string)
