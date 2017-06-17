@@ -14,8 +14,8 @@
     "serve": "ionic-app-scripts serve",
     "lint": "ionic-app-scripts lint",
 
-    "export": "cp -r www/* ../ui.content/src/main/resources/jcr_root/etc/author; rm ../ui.content/src/main/resources/jcr_root/etc/author/index.html",
-    "export-browser": "cp -r platforms/browser/www/* ../ui.content/src/main/resources/jcr_root/etc/author; rm ../ui.content/src/main/resources/jcr_root/etc/author/index.html",
+    "export": "cp -r www/* ../ui.content/src/main/resources/SLING-INF/scripts/etc/author; rm ../ui.content/src/main/resources/SLING-INF/scripts/etc/author/index.html",
+    "export-browser": "cp -r platforms/browser/www/* ../ui.content/src/main/resources/SLING-INF/scripts/etc/author; rm ../ui.content/src/main/resources/SLING-INF/scripts/etc/author/index.html",
 
     "ionic:build": "ionic-app-scripts build",
     "ionic:serve": "ionic-app-scripts serve"

@@ -19,14 +19,24 @@
 
 //
 //  You can find out more documentation on this topic 
-//	by following these links:
+//  by following these links:
 //
 //    -  http://sling.apache.org/site/content-loading.html
-//	  -	 http://jackrabbit.apache.org/node-type-notation.html
+//    -  http://jackrabbit.apache.org/node-type-notation.html
 //
 
-<my = 'http://namespace.com/my'>
+<vardyger = 'https://vardyger.org'>
 
-[my:node] > nt:unstructured
-	- title (string)
-	- description (string)
+[vardyger:author] > nt:unstructured
+
+[vardyger:page] > nt:unstructured
+    - title (string)
+    - description (string)
+    
+[vardyger:template] > nt:hierarchyNode
+
+[vardyger:component] > nt:unstructured
+
+[vardyger:comment] > nt:unstructured
+    - author (string)
+    - comment (string)

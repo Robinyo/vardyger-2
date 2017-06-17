@@ -11,19 +11,6 @@ Bundles can provide initial content, which is loaded into the repository when th
 The sling-intitial-content-archetype generates a Maven project which will build an OSGi bundle that supports JCR NodeType registration (in SLING-INF/nodetypes/nodetypes.cnd) and initial content loading (in SLING-INF/scripts and SLING-INF/content).
 
 
-
-http://localhost:8080/my-first-node.html
-
-
-
-
-
-
-
-
-
-
-
 ## Node Types
 
 ### src/main/resources/SLING-INF/nodetypes/nodetypes.cnd
@@ -40,9 +27,9 @@ http://localhost:8080/my-first-node.html
     ...  
 ```
 
-## Initial Content (by convention, located in jcr_root/content)
+## Initial Content (by convention, located in SLING-INF/content)
 
-The content folder: ui.content/src/main/resources/jcr_root/content
+The content folder: ui.content/src/main/resources/SLING-INF/content
 
 ### author/index.json
 
@@ -58,31 +45,29 @@ The content folder: ui.content/src/main/resources/jcr_root/content
     ...
     
     <Sling-Initial-Content>           
-      <!-- Initial content -->
-      jcr_root/content;overwrite:=true;uninstall:=true;path:=/content,
-                          
-      <!-- Script (apps/vardyger/author/html.esp) to load Ionic Web Application -->
-      jcr_root/apps;overwrite:=true;uninstall:=true;path:=/apps,
-                          
-      <!-- Ionic Web Application -->
-      jcr_root/etc/author;overwrite:=true;uninstall:=true;path:=/author,
-      jcr_root/etc/author/assets;overwrite:=true;uninstall:=true;path:=/author/assets,
-      jcr_root/etc/author/build;overwrite:=true;uninstall:=true;path:=/author/build                    
+        <!-- Script (apps/html.esp) to load the Ionic Web Application -->
+        SLING-INF/scripts/apps;overwrite:=true;uninstall:=true;path:=/apps/vardyger/author,
+                            
+        <!-- Ionic Web Application -->
+        SLING-INF/scripts/etc/author;overwrite:=true;ignoreImportProviders:="json,xml,html,jar,zip";uninstall:=true;path:=/author,
+                            
+        <!-- Initial content -->
+        SLING-INF/content;overwrite:=true;uninstall:=true;path:=/content                  
     </Sling-Initial-Content>
     
     ...
 ```
 
-## Scripts (by convention, located in jcr_root/apps)
+## Scripts (by convention, located in SLING-INF/scripts)
 
-### ui.content/src/main/resources/jcr_root/apps/vardyger/author/html.esp
+### ui.content/src/main/resources/SLING-INF/apps/html.esp
 This is the "host" page for the Author (Content Authoring) application.
 
 This is where we include the files (e.g., "build/main.js") generated during the build process (as per the author/www/index.html file).
 
-## External Scripts (by convention, located in jcr_root/etc)
+## External Scripts (by convention, located in SLING-INF/scripts/etc)
 
-### ui.content/src/main/resources/jcr_root/etc/author
+### ui.content/src/main/resources/SLING-INF/scripts/etc/author
 The Author application is copied from the **author module** (author/www) to the **ui.content module** (etc/author)
 
 ## Build

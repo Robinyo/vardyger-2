@@ -51,8 +51,16 @@
                         <Private-Package></Private-Package>
                         <Sling-Nodetypes>SLING-INF/nodetypes/nodetypes.cnd</Sling-Nodetypes>
                         <Sling-Initial-Content>
-                            SLING-INF/scripts;overwrite:=true;uninstall:=true;path:=/apps/my/node,
+                        
+                            <!-- Script (apps/html.esp) to load the Ionic Web Application -->
+                            SLING-INF/scripts/apps;overwrite:=true;uninstall:=true;path:=/apps/vardyger/author,
+                            
+                            <!-- Ionic Web Application -->
+                            SLING-INF/scripts/etc/author;overwrite:=true;ignoreImportProviders:="json,xml,html,jar,zip";uninstall:=true;path:=/author,
+                            
+                            <!-- Initial content -->
                             SLING-INF/content;overwrite:=true;uninstall:=true;path:=/content
+                            
                         </Sling-Initial-Content>
                     </instructions>
                 </configuration>
